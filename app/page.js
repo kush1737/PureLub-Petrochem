@@ -1,5 +1,6 @@
 import { site } from "../lib/site";
 import Motion from "../components/Motion";
+import SocialIcon from "../components/SocialIcon";
 
 const img = (src) => `/img/${src}.jpg`;
 
@@ -150,6 +151,32 @@ export default function Home() {
             </div>
           </div>
         </section>
+<section className="owner" id="owner">
+          <div className="wrap owner-in">
+            <div className="owner-photo">
+              {site.owner.photo ? (
+                <img src={site.owner.photo} alt={`Portrait of ${site.owner.name}`} width="800" height="1000" loading="lazy" />
+              ) : (
+                <div className="mono" aria-hidden="true">{site.owner.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}</div>
+              )}
+            </div>
+            <div>
+              <p className="kick">Leadership</p>
+              <h2>{site.owner.name}</h2>
+              <p className="role">{site.owner.role}</p>
+              {site.owner.note && <p className="lead">{site.owner.note}</p>}
+              <ul className="socials" aria-label={`${site.owner.name} on social media`}>
+                {site.owner.socials.map((x) => (
+                  <li key={x.label}>
+                    <a href={x.href} target="_blank" rel="noopener noreferrer" aria-label={x.label} title={x.label}>
+                      <SocialIcon name={x.icon} />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
 
 
         <section className="industries" id="industries">
@@ -171,7 +198,7 @@ export default function Home() {
             </ul>
           </div>
         </section>
-
+                
         <section className="faq" id="faq">
           <div className="wrap faq-in">
             <h2>Common questions.</h2>

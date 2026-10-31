@@ -193,6 +193,23 @@ footer{background:#06101b;color:rgba(255,255,255,.6);font-size:.85rem;padding:1.
 .dlist li:last-child{border-bottom:1px solid var(--line)}
 .dlist a{font-size:.95rem;font-weight:600;border-bottom:2px solid var(--amber)}
 
+/* owner */
+.owner{background:var(--mist);padding:clamp(70px,10vw,140px) 0}
+.owner-in{display:grid;grid-template-columns:.8fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+.owner-photo{position:relative;aspect-ratio:4/5;max-width:440px;width:100%}
+.owner-photo::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--amber);border-radius:10px}
+.owner-photo img,.owner-photo .mono{position:relative;width:100%;height:100%;object-fit:cover;border-radius:10px}
+.owner-photo .mono{display:grid;place-items:center;background:linear-gradient(160deg,var(--ink2),var(--ink));color:var(--amber);font-size:5rem;font-weight:600;letter-spacing:-.04em}
+.owner h2{margin:.2rem 0 .5rem}
+.role{font-size:1.2rem;color:var(--steel);font-weight:500}
+.owner .lead{margin-top:1.4rem}
+.socials{display:flex;gap:.8rem;margin-top:2rem}
+.socials a{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line);transition:background .25s,transform .25s,box-shadow .25s}
+.socials a:hover{background:var(--amber);box-shadow:none;transform:translateY(-2px)}
+.socials svg{width:20px;height:20px}
+@media(max-width:800px){.owner-in{grid-template-columns:1fr}.owner-photo{max-width:320px;margin-right:18px}}
+
+
 .faq{background:#fff;padding:clamp(70px,10vw,140px) 0}
 .faq-in{display:grid;grid-template-columns:1fr 1.5fr;gap:clamp(2rem,6vw,6rem);align-items:start}
 .faq details{border-top:1px solid var(--line)}
