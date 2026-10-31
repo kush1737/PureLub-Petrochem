@@ -1,0 +1,20 @@
+{
+  "name": "purelubpetrochem-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "next build && node scripts/make-preview.mjs",
+    "serve": "npx serve out"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
